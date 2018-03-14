@@ -1,0 +1,9 @@
+.mouseBox{ height:           200px; 
+           width:            200px;
+           background:     blue;
+           border-style:     solid;
+}
+
+.mousePosition{
+          color: white;
+}
