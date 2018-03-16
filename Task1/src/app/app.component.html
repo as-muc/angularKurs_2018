@@ -1,16 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+   Willkommen zur {{ title }}!
   </h1>
-  <div>
+  <!-- <div class="aufgabe">
       <info-box></info-box>
   </div>
-  <div>
+  <div class="aufgabe">
       <mouse-over></mouse-over>
   </div>
-  <div>
-      <title-box [title]="'Mein Titel (click for ping event)'" (ping)="onPing($event)"></title-box>>
-      <title-box [title]="title"></title-box>>
+  <div class="aufgabe">
+      <title-box [title]="'Mein Titel (click for ping event)'" (ping)="onPing($event)"></title-box>
+      <title-box [title]="title"></title-box>
+  </div> -->
+   <div class="aufgabe">
+        <router-outlet></router-outlet>
   </div>
+
 </div>

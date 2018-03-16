@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { MouseOverComponent } from './mouse-over/mouse-over.component';
 import { TitleBoxComponent } from './title-box/title-box.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookDataService } from './shared/book-data.service';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+
 
 
 @NgModule({
@@ -13,12 +20,20 @@ import { TitleBoxComponent } from './title-box/title-box.component';
     AppComponent,
     InfoBoxComponent,
     MouseOverComponent,
-    TitleBoxComponent
+    TitleBoxComponent,
+    BookListComponent,
+    BookDetailComponent
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+
   ],
-  providers: [],
+  providers: [
+    BookDataService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
