@@ -1,0 +1,38 @@
+<div *ngIf="book">
+  <h2> {{book.title}} </h2>
+ 
+  <!-- Aufgabe 20
+  <form #form="ngForm">
+    <input
+      type="text"
+      [(ngModel)]="book.title" 
+      name="title"
+      #title="ngModel">
+  </form> -->
+
+  <!-- Aufgabe 21 -->
+  <form #form="ngForm" (ngSubmit)="save(form.value)">
+    <div  class="form-group">
+        <label for="exampleInputEmail1">Buchtitel</label>
+      <input class="form-control"
+      type="text" required
+      [(ngModel)]="book.title" 
+      name="title"  #title="ngModel">
+      <div [hidden] = "!title.errors?.required || title.pristine">Title must not be empty</div><br/>
+      <textarea
+      type="text"
+      [(ngModel)]="book.abstract" 
+      name="abstract"
+      #abstract="ngModel"></textarea><br/>
+      <input
+      type="text"
+      [(ngModel)]="book.author" 
+      name="author"
+      #author="ngModel"> 
+      <br/>
+      <button type="submit" [disabled]="!form.valid">
+          Submit
+      </button>
+    </div>          
+  </form>
+</div>

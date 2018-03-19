@@ -1,0 +1,13 @@
+<p>
+  book-new works!
+</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  
+    <input type="text" formControlName="title"> <p [hidden] = " ! form.get('title').hasError ('required')">Der Titel darf nicht leer sein!</p>
+    <br/>
+    <input type="text" formControlName="isbn"> <p [hidden] = "!form.get('isbn').errors">ISBN muss mindestens 11 Zeichen lang sein!</p>
+    <br/>
+      <button type="submit" [disabled]="!form.valid">
+          Speichern
+      </button>
+</form>
