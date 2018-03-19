@@ -1,9 +1,0 @@
-<div class="container">
-<div class="row" *ngFor="let book of books">
-  <div class="col-xs-12">
-      <a [routerLink]=" ['/books', book.isbn ] ">
-        <button style="padding: 0px; margin: 3px;" class="btn btn-success">{{ book.title }}</button>
-      </a>
-  </div>
-</div>
-</div>
